@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_care/const/assets/icons.dart';
 import 'package:health_care/const/color.dart';
+import 'package:health_care/view/auth/signUp/forget_password_page.dart';
 import 'package:health_care/view/components/custom_button.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/components/custom_textfield.dart';
@@ -41,10 +42,19 @@ class SignInPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  commonText("Forgot Password?",
-                      size: 16,
-                      color: const Color.fromRGBO(246, 110, 16, 1),
-                      isBold: true),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ForgetPasswordPage()),
+                      );
+                    },
+                    child: commonText("Forgot Password?",
+                        size: 16,
+                        color: const Color.fromRGBO(246, 110, 16, 1),
+                        isBold: true),
+                  ),
                 ],
               ),
               const SizedBox(height: 40),
@@ -76,27 +86,27 @@ class SignInPage extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 20),
-              Center(
-                child: GestureDetector(
-                  onTap: () {},
-                  child: const Text.rich(
-                    TextSpan(
-                      text: 'Don’t have an account? ',
-                      style: TextStyle(color: Colors.black),
-                      children: [
-                        TextSpan(
-                          text: 'Sign up',
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // const SizedBox(height: 20),
+              // Center(
+              //   child: GestureDetector(
+              //     onTap: () {},
+              //     child: const Text.rich(
+              //       TextSpan(
+              //         text: 'Don’t have an account? ',
+              //         style: TextStyle(color: Colors.black),
+              //         children: [
+              //           TextSpan(
+              //             text: 'Sign up',
+              //             style: TextStyle(
+              //               color: Colors.red,
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

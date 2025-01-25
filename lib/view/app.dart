@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:health_care/const/color.dart';
+import 'package:health_care/view/auth/signIn/sign_in_page.dart';
 import 'package:health_care/view/splash_acreen.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -33,14 +35,13 @@ class ResponsiveWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // Constrain the width to a typical mobile width (e.g., 375.0 or 400.0)
         double mobileWidth = 480.0;
         return Center(
           child: SizedBox(
             width: constraints.maxWidth > mobileWidth
                 ? mobileWidth
                 : constraints.maxWidth,
-            child: SplashScreen(),
+            child: SignInPage(),
           ),
         );
       },

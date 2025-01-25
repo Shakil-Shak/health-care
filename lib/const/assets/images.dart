@@ -8,4 +8,5 @@ class AppImages {
    static const welcomeTo = "assets/images/welcome_to.png";
   static const changePassword = "assets/images/change_password.png";
   static const forgetPassword = "assets/images/forget_password.png";
+    static const noImage = "assets/images/no_image.png";
 }
