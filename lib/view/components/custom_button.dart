@@ -5,7 +5,7 @@ import 'package:health_care/view/components/custom_text.dart';
 Widget commonButton(String title,
     {Color color = AppColor.primaryColor,
     Color textColor = Colors.white,
-    double textSize = 14,
+    double textSize = 18,
     double width = double.infinity,
     double margin = 20.0,
     double borderRadious = 10.0,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/auth/signIn/sign_in_page.dart';
-import 'package:health_care/view/splash_acreen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

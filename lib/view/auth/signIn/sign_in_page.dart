@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health_care/const/assets/icons.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/auth/signUp/forget_password_page.dart';
+import 'package:health_care/view/bottom_nav.dart';
 import 'package:health_care/view/components/custom_button.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/components/custom_textfield.dart';
@@ -47,7 +48,7 @@ class SignInPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ForgetPasswordPage()),
+                            builder: (context) => const ForgetPasswordPage()),
                       );
                     },
                     child: commonText("Forgot Password?",
@@ -58,7 +59,18 @@ class SignInPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 40),
-              commonButton("Sign in", isBold: true, textSize: 16),
+              commonButton(
+                "Sign in",
+                isBold: true,
+                textSize: 16,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BottomNavBarScreen()),
+                  );
+                },
+              ),
               const SizedBox(height: 20),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(

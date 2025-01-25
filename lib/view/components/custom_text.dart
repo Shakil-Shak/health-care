@@ -25,7 +25,7 @@ Widget commonText(
       fontSize: size,
       fontWeight: (fontWeight != null)
           ? fontWeight
-          : (isBold ? FontWeight.bold : FontWeight.normal),
+          : (isBold ? FontWeight.bold : FontWeight.w600),
       color: color,
       decoration: decoration,
       fontStyle: fontStyle,
