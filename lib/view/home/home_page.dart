@@ -7,6 +7,7 @@ import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/home/appointmentRequest/appointment_request_details_page.dart';
 import 'package:health_care/view/home/appointmentRequest/appointment_request_page.dart';
 import 'package:health_care/view/home/upcoming_appointment_page.dart';
+import 'package:health_care/view/notification/notification_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -96,7 +97,15 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    SvgPicture.asset(AppIcons.notification)
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NotificationScreen()),
+                          );
+                        },
+                        child: SvgPicture.asset(AppIcons.notification))
                   ],
                 ),
                 const SizedBox(

@@ -16,4 +16,24 @@ class AppIcons {
   static const date = "assets/icons/date.svg";
   static const time = "assets/icons/time.svg";
   static const notificationOne = "assets/icons/notificationOne.svg";
+    static const review = "assets/icons/review.svg";
+  static const responseTime = "assets/icons/responseTime.svg";
+  static const audio = "assets/icons/audio.svg";
+  static const video = "assets/icons/video.svg";
+  static const card = "assets/icons/card.svg";
+  static const dateOne = "assets/icons/dateOne.svg";
+  static const timeOne = "assets/icons/timeOne.svg";
+  static const dateTwo = "assets/icons/dateTwo.svg";
+  static const timeTwo = "assets/icons/timeTwo.svg";
+  static const editProfile = "assets/icons/editProfile.svg";
+  static const report = "assets/icons/report.svg";
+  static const subscription = "assets/icons/subscription.svg";
+  static const payHistory = "assets/icons/payHistory.svg";
+  static const setting = "assets/icons/setting.svg";
+  static const logout = "assets/icons/logout.svg";
+  static const pdf = "assets/icons/pdf.svg";
+  static const schedule = "assets/icons/schedule.svg";
+  static const premium = "assets/icons/premium.svg";
+  static const lockTwo = "assets/icons/lockTwo.svg";
+  static const delete = "assets/icons/delete.svg";
 }

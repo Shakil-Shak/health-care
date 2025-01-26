@@ -19,7 +19,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
 
   final List<Widget> _screens = [
     const HomePage(),
-    const AppointmentPage(),
+     AppointmentPage(),
     const ChatPage(),
     const ProfilePage(),
   ];

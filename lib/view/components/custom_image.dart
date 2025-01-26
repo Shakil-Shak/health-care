@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_care/const/assets/images.dart';
 
-
 enum ImageType { png, svg, network }
 
 class CommonImage extends StatelessWidget {
@@ -66,12 +65,12 @@ class CommonImage extends StatelessWidget {
 
     if (imageType == ImageType.network) {
       imageWidget = CachedNetworkImage(
-        height: height.h,
-        width: width.w,
+        height: height,
+        width: width,
         imageUrl: "$imageSrc",
         imageBuilder: (context, imageProvider) => Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(borderRadius.r),
+            borderRadius: BorderRadius.circular(borderRadius),
             image: DecorationImage(
               image: imageProvider,
               fit: BoxFit.fill,
@@ -91,6 +90,6 @@ class CommonImage extends StatelessWidget {
       );
     }
 
-    return SizedBox(height: height.h, width: width.w, child: imageWidget);
+    return SizedBox(height: height, width: width, child: imageWidget);
   }
 }
