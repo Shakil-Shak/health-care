@@ -5,6 +5,7 @@ import 'package:health_care/const/assets/images.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:date_picker_plus/date_picker_plus.dart';
+import 'package:health_care/view/home/appointmentRequest/appointment_request_details_page.dart';
 
 class UpcomingAppointmentPage extends StatefulWidget {
   const UpcomingAppointmentPage({super.key});
@@ -164,7 +165,16 @@ class _HomePageState extends State<UpcomingAppointmentPage> {
                   ),
                   itemCount: clients.length,
                   itemBuilder: (context, index) {
-                    return ClientCard(clients[index], context);
+                    return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const AppointmentRequestDetailsPage()),
+                          );
+                        },
+                        child: ClientCard(clients[index], context));
                   },
                 ),
               ],

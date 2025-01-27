@@ -5,6 +5,7 @@ import 'package:health_care/const/assets/images.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:date_picker_plus/date_picker_plus.dart';
+import 'package:health_care/view/home/upcomingAppointment/upcoming_appointment_details_page.dart';
 
 class AppointmentRequestPage extends StatefulWidget {
   const AppointmentRequestPage({super.key});
@@ -80,6 +81,14 @@ class _HomePageState extends State<AppointmentRequestPage> {
                       color: AppColor.primaryColorLight2,
                       margin: const EdgeInsets.only(bottom: 15),
                       child: ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const UpcomingAppointmentDetailsPage()),
+                          );
+                        },
                         leading: SvgPicture.asset(
                           AppIcons.appointmentRequestCalendar,
                           color: AppColor.primaryColor,

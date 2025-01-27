@@ -15,8 +15,8 @@ class AppointmentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
-            color: AppColor.primaryColor, size: 24, isBold: true),
+        title: commonText("Booking Records",
+            color: AppColor.black, size: 20, isBold: true),
         centerTitle: true,
       ),
       body: Column(
@@ -28,7 +28,7 @@ class AppointmentPage extends StatelessWidget {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    buildTab(0, "Upcoming"),
+                    buildTab(0, "Pending"),
                     buildTab(1, "Completed"),
                     buildTab(2, "Canceled"),
                   ],
@@ -68,16 +68,11 @@ class AppointmentPage extends StatelessWidget {
       },
       child: Column(
         children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
+          commonText(title,
+              size: 16,
               color: appointmentController.selectedTab.value == index
                   ? Colors.black
-                  : Colors.grey,
-            ),
-          ),
+                  : Colors.grey),
           const SizedBox(height: 4),
           Stack(
             children: [
@@ -100,7 +95,7 @@ class AppointmentPage extends StatelessWidget {
                     ? Container(
                         key: ValueKey(index),
                         decoration: const BoxDecoration(
-                          color: Colors.red,
+                          color: Colors.black,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(10),
                             topLeft: Radius.circular(10),
@@ -126,7 +121,7 @@ class AppointmentPage extends StatelessWidget {
   Widget getBody(int selectedIndex) {
     switch (selectedIndex) {
       case 0:
-        return upcomingBody(key: const ValueKey(0));
+        return pendingBody(key: const ValueKey(0));
       case 1:
         return completedBody(key: const ValueKey(1));
       case 2:
@@ -136,22 +131,19 @@ class AppointmentPage extends StatelessWidget {
     }
   }
 
-  Widget upcomingBody({Key? key}) {
+  Widget pendingBody({Key? key}) {
     return ListView.builder(
       key: key,
       itemCount: 30,
       itemBuilder: (context, index) {
-        return InkWell(
+        return AppointmentCard(
+          title: "Dr. Emama",
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => AppointmentDetailsPage()),
             );
           },
-          child: AppointmentCard(
-            title: "Dr. Emama",
-            onTap: () {},
-          ),
         );
       },
     );

@@ -6,7 +6,8 @@ import 'package:health_care/const/color.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/home/appointmentRequest/appointment_request_details_page.dart';
 import 'package:health_care/view/home/appointmentRequest/appointment_request_page.dart';
-import 'package:health_care/view/home/upcoming_appointment_page.dart';
+import 'package:health_care/view/home/upcomingAppointment/upcoming_appointment_details_page.dart';
+import 'package:health_care/view/home/upcomingAppointment/upcoming_appointment_page.dart';
 import 'package:health_care/view/notification/notification_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -102,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => NotificationScreen()),
+                                builder: (context) =>
+                                    const NotificationScreen()),
                           );
                         },
                         child: SvgPicture.asset(AppIcons.notification))
@@ -166,6 +168,14 @@ class _HomePageState extends State<HomePage> {
                       color: AppColor.primaryColorLight2,
                       margin: const EdgeInsets.only(bottom: 15),
                       child: ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const UpcomingAppointmentDetailsPage()),
+                          );
+                        },
                         leading: SvgPicture.asset(
                           AppIcons.appointmentRequestCalendar,
                           color: AppColor.primaryColor,

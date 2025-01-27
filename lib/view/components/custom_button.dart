@@ -61,7 +61,7 @@ Widget commonBorderButton(String title,
       ),
       child: Center(
         child: commonText(title,
-            size: 18, color: AppColor.primaryColor, isBold: true),
+            size: 14, color: AppColor.primaryColor, isBold: true),
       ),
     ),
   );

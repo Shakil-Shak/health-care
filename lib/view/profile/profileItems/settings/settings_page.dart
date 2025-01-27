@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:health_care/const/assets/icons.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/components/custom_button.dart';
 import 'package:health_care/view/components/custom_text.dart';
+import 'package:health_care/view/profile/profileItems/settings/change_password_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -14,12 +14,12 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
-            color: AppColor.primaryColor, size: 24, isBold: true),
+        title: commonText("Setting",
+            color: AppColor.black, size: 20, isBold: true),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -29,7 +29,11 @@ class SettingsPage extends StatelessWidget {
             settingItem(
                 svg: AppIcons.lockTwo,
                 ontap: () {
-                  // Get.toNamed(AppRoute.changePasswordScreen);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ChangePasswordPage()),
+                  );
                 },
                 title: "Change Password"),
             const SizedBox(
@@ -59,7 +63,7 @@ class SettingsPage extends StatelessWidget {
         height: 52,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: ShapeDecoration(
-          color: Color(0xFFFEEBEA),
+          color: const Color(0xFFFEEBEA),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         ),
         child: Row(
@@ -79,7 +83,7 @@ class SettingsPage extends StatelessWidget {
                 )
               ],
             ),
-            Icon(
+            const Icon(
               Icons.arrow_forward_ios,
               size: 20,
             )
@@ -110,7 +114,7 @@ class SettingsPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -154,22 +158,18 @@ class SettingsPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(
-                        width: 100,
-                        height: 40,
+                      Expanded(
                         child: commonBorderButton(
                           onTap: () => Get.back(),
                           "Cancel",
-                          borderColor: AppColor.black,
+                          borderColor: AppColor.primaryColor,
                         ),
                       ),
-                      SizedBox(
-                        width: 100,
-                        height: 40,
+                      Expanded(
                         child: commonButton(
                           onTap: () => Get.back(),
                           "Done",
-                          textSize: 12,
+                          textSize: 14,
                           textColor: AppColor.white,
                         ),
                       ),

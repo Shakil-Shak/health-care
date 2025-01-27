@@ -6,8 +6,8 @@ import 'package:health_care/view/components/custom_image.dart';
 import 'package:health_care/view/components/custom_text.dart';
 
 class AppointmentCard extends StatelessWidget {
- final VoidCallback onTap;
- final String title;
+  final VoidCallback onTap;
+  final String title;
   const AppointmentCard({super.key, required this.onTap, required this.title});
 
   @override
@@ -59,7 +59,7 @@ class AppointmentCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset(AppIcons.calender),
+                          SvgPicture.asset(AppIcons.dateOne),
                           const SizedBox(
                             width: 4,
                           ),
@@ -76,7 +76,10 @@ class AppointmentCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          SvgPicture.asset(AppIcons.calender),
+                          SvgPicture.asset(
+                            AppIcons.timeTwo,
+                            color: AppColor.primaryColor,
+                          ),
                           const SizedBox(
                             width: 5,
                           ),

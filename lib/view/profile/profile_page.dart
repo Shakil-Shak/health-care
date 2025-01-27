@@ -10,6 +10,7 @@ import 'package:health_care/view/profile/profileItems/edit_profile_page.dart';
 import 'package:health_care/view/profile/profileItems/medical_records_page.dart';
 import 'package:health_care/view/profile/profileItems/payment_history_page.dart';
 import 'package:health_care/view/profile/profileItems/settings/settings_page.dart';
+import 'package:health_care/view/profile/profileItems/wallet/wallet_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -79,12 +80,12 @@ class ProfilePage extends StatelessWidget {
                   }),
               profileItem(
                   svg: AppIcons.payHistory,
-                  text: "Payment History",
+                  text: "Wallet",
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const PaymentHistoryPage()),
+                          builder: (context) => const WalletPage()),
                     );
                   }),
               profileItem(

@@ -19,7 +19,7 @@ class EditProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
+        title: commonText("Edit Profile",
             color: AppColor.primaryColor, size: 24, isBold: true),
         centerTitle: true,
       ),
@@ -38,41 +38,23 @@ class EditProfilePage extends StatelessWidget {
                       fieldHeading(title: "Full Name"),
                       commonTextfield(
                         profileController.fullNameController.value,
-                        hintText: "username",
+                        hintText: "Enter Your Full Name",
                         // validator: (value) => OtherHelper.validator(value),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      //==========================email field
                       fieldHeading(title: "Email"),
                       commonTextfield(
                         profileController.mailController.value,
-                        hintText: "email",
-                        prifixIconWidget: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: SvgPicture.asset(AppIcons.email),
-                        ),
+                        hintText: "Enter Your Email Here",
+
                         // validator: (value) => OtherHelper.emailValidator(value),
                       ),
-
                       const SizedBox(
                         height: 10,
                       ),
-                      fieldHeading(title: "Address"),
-                      commonTextfield(
-                        profileController.adressController.value,
-                        hintText: "Enter Your Address",
-                        // validator: (value) => OtherHelper.emailValidator(value),
-                      ),
-
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      //==================contact
-
-                      fieldHeading(title: "Contuct Number"),
-
+                      fieldHeading(title: "Contact Number"),
                       SizedBox(
                         height: 65,
                         child: IntlPhoneField(
@@ -108,15 +90,22 @@ class EditProfilePage extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
+                      fieldHeading(title: "Address"),
+                      commonTextfield(
+                        profileController.adressController.value,
+                        hintText: "Enter Your Address",
+                        // validator: (value) => OtherHelper.emailValidator(value),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       fieldHeading(title: "Gender"),
-                      //==============================================================gender
                       Obx(() {
                         return Container(
                           width: double.infinity,
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 1),
                           decoration: BoxDecoration(
-                            color: AppColor.primaryColor,
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(color: AppColor.primaryColor),
                           ),
@@ -147,11 +136,9 @@ class EditProfilePage extends StatelessWidget {
                           ),
                         );
                       }),
-
                       const SizedBox(
                         height: 10,
                       ),
-
                       fieldHeading(title: "Date of Birth"),
                       commonTextfield(
                         profileController.dateOfBirth.value,
@@ -166,8 +153,8 @@ class EditProfilePage extends StatelessWidget {
                               },
                               child: SvgPicture.asset(
                                 AppIcons.calender,
-                                height: 15,
-                                width: 15,
+                                height: 20,
+                                width: 20,
                               )),
                         ),
                         // validator: (value) => OtherHelper.validator(value),
@@ -175,27 +162,24 @@ class EditProfilePage extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-
                       fieldHeading(title: "Height"),
                       commonTextfield(
                         profileController.height.value,
-                        hintText: "Write your height",
+                        hintText: "Enter your height",
                         // validator: (value) => OtherHelper.validator(value),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-
                       fieldHeading(title: "Weight"),
                       commonTextfield(
                         profileController.weight.value,
-                        hintText: "write your weight",
+                        hintText: "Enter your weight",
                         // validator: (value) => OtherHelper.validator(value),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-
                       fieldHeading(title: "Medical Condition"),
                       commonTextfield(
                         profileController.fullNameController.value,
@@ -206,10 +190,13 @@ class EditProfilePage extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      fieldHeading(title: "Attach Health Documents"),
+                      fieldHeading(title: "Update Heath Document"),
                       DottedBorder(
                           color: AppColor.primaryColor,
                           strokeCap: StrokeCap.butt,
+                          dashPattern: [
+                            10,
+                          ],
                           radius: const Radius.circular(10),
                           child: SizedBox(
                               width: double.infinity,
@@ -235,9 +222,9 @@ class EditProfilePage extends StatelessWidget {
                         onTap: () {
                           // Get.offAllNamed(AppRoute.bottomNavScreen);
                         },
-                        "Continue",
+                        "Save Changes",
                         textSize: 16,
-                        color: AppColor.white,
+                        color: AppColor.primaryColor,
                       ),
                       const SizedBox(
                         height: 20,
@@ -254,11 +241,18 @@ class EditProfilePage extends StatelessWidget {
   Widget fieldHeading({required String title}) {
     return Align(
         alignment: Alignment.topLeft,
-        child: commonText(
-          title,
-          size: 18,
-          fontWeight: FontWeight.w600,
-          color: AppColor.primaryColor,
+        child: Column(
+          children: [
+            commonText(
+              title,
+              size: 20,
+              fontWeight: FontWeight.w600,
+              color: AppColor.primaryColor,
+            ),
+            const SizedBox(
+              height: 5,
+            )
+          ],
         ));
   }
 }

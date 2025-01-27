@@ -11,7 +11,7 @@ class MedicalRecordsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
+        title: commonText("Medical Records",
             color: AppColor.primaryColor, size: 24, isBold: true),
         centerTitle: true,
       ),

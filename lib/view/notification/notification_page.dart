@@ -10,16 +10,16 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
-            color: AppColor.primaryColor, size: 24, isBold: true),
+        title: commonText("Notification",
+            color: AppColor.black, size: 20, isBold: true),
         centerTitle: true,
       ),
       body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: ListView.builder(
               itemCount: 20,
               itemBuilder: (context, index) {
-                return NotificationCard();
+                return const NotificationCard();
               })),
     );
   }

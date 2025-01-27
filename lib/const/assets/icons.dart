@@ -36,4 +36,7 @@ class AppIcons {
   static const premium = "assets/icons/premium.svg";
   static const lockTwo = "assets/icons/lockTwo.svg";
   static const delete = "assets/icons/delete.svg";
+   static const search = "assets/icons/search.svg";
+   static const attachment = "assets/icons/attachment.svg";
+   static const sendMessage = "assets/icons/send_message.svg";
 }

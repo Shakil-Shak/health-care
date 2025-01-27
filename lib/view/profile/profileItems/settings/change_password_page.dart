@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/controller/settings/change_password_controller.dart';
+import 'package:health_care/view/auth/signUp/forget_password_page.dart';
 import 'package:health_care/view/components/custom_button.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/components/custom_textfield.dart';
 
-class ChangePasswordScreen extends StatelessWidget {
-  ChangePasswordScreen({super.key});
+class ChangePasswordPage extends StatelessWidget {
+  ChangePasswordPage({super.key});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final ChangePasswordController settingController =
       Get.put(ChangePasswordController());
@@ -16,13 +16,13 @@ class ChangePasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
-            color: AppColor.primaryColor, size: 24, isBold: true),
+        title: commonText("Change Password",
+            color: AppColor.black, size: 20, isBold: true),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               const SizedBox(
@@ -34,21 +34,33 @@ class ChangePasswordScreen extends StatelessWidget {
                   commonTextfield(
                       hintText: "Current Password",
                       settingController.currentPassCtl.value,
-                      isPasswordVisible: false),
+                      isPasswordVisible: false,
+                      issuffixIconVisible: true,
+                      prifixIconWidget: const Icon(Icons.lock),
+                      borderColor: Colors.transparent,
+                      color: AppColor.primaryColorLight2),
                   const SizedBox(
                     height: 20,
                   ),
                   commonTextfield(
                       hintText: "New Password",
                       settingController.currentPassCtl.value,
-                      isPasswordVisible: false),
+                      isPasswordVisible: false,
+                      issuffixIconVisible: true,
+                      prifixIconWidget: const Icon(Icons.lock),
+                      borderColor: Colors.transparent,
+                      color: AppColor.primaryColorLight2),
                   const SizedBox(
                     height: 20,
                   ),
                   commonTextfield(
                       hintText: "Confirm new password",
                       settingController.currentPassCtl.value,
-                      isPasswordVisible: false),
+                      isPasswordVisible: false,
+                      issuffixIconVisible: true,
+                      prifixIconWidget: const Icon(Icons.lock),
+                      borderColor: Colors.transparent,
+                      color: AppColor.primaryColorLight2),
                   const SizedBox(
                     height: 10,
                   ),
@@ -58,7 +70,11 @@ class ChangePasswordScreen extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: TextButton(
                       onPressed: () {
-                        // Get.toNamed(AppRoute.forgetPassScreen);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ForgetPasswordPage()),
+                        );
                       },
                       child: commonText(
                         "Forgot the password?",
@@ -67,7 +83,7 @@ class ChangePasswordScreen extends StatelessWidget {
                         color: AppColor.primaryColor,
                       ))),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               commonButton(
                 onTap: () {

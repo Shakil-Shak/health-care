@@ -4,8 +4,8 @@ import 'package:health_care/const/assets/icons.dart';
 import 'package:health_care/const/color.dart';
 import 'package:health_care/view/components/custom_text.dart';
 
-class AppointmentDetailsPage extends StatelessWidget {
-  const AppointmentDetailsPage({super.key});
+class UpcomingAppointmentDetailsPage extends StatelessWidget {
+  const UpcomingAppointmentDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,22 +83,23 @@ class AppointmentDetailsPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         commonText('Booking Date',
-                            size: 20, isBold: true, color: AppColor.black),
+                            size: 20,
+                            isBold: true,
+                            color: AppColor.primaryColor),
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 1, color: AppColor.primaryColor),
+                            border: Border.all(width: 1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               commonText('12-04-2024',
-                                  size: 16, color: AppColor.black),
+                                  size: 16, color: AppColor.primaryColor),
                               const Icon(Icons.calendar_month_outlined,
-                                  size: 24, color: AppColor.black),
+                                  size: 24, color: AppColor.primaryColor),
                             ],
                           ),
                         ),
@@ -111,22 +112,23 @@ class AppointmentDetailsPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         commonText('Booking Time',
-                            size: 20, isBold: true, color: AppColor.black),
+                            size: 20,
+                            isBold: true,
+                            color: AppColor.primaryColor),
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 1, color: AppColor.primaryColor),
+                            border: Border.all(width: 1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               commonText('12.30PM',
-                                  size: 16, color: AppColor.black),
+                                  size: 16, color: AppColor.primaryColor),
                               const Icon(Icons.access_time,
-                                  size: 24, color: AppColor.black),
+                                  size: 24, color: AppColor.primaryColor),
                             ],
                           ),
                         ),
