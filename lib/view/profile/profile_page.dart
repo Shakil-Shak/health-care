@@ -8,7 +8,6 @@ import 'package:health_care/view/components/custom_image.dart';
 import 'package:health_care/view/components/custom_text.dart';
 import 'package:health_care/view/profile/profileItems/edit_profile_page.dart';
 import 'package:health_care/view/profile/profileItems/medical_records_page.dart';
-import 'package:health_care/view/profile/profileItems/payment_history_page.dart';
 import 'package:health_care/view/profile/profileItems/settings/settings_page.dart';
 import 'package:health_care/view/profile/profileItems/wallet/wallet_page.dart';
 
@@ -19,8 +18,8 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: commonText("Appointment Request",
-            color: AppColor.primaryColor, size: 24, isBold: true),
+        title: commonText("Profile",
+            color: AppColor.primaryColor, size: 20, isBold: true),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -72,12 +71,12 @@ class ProfilePage extends StatelessWidget {
                           builder: (context) => const MedicalRecordsPage()),
                     );
                   }),
-              profileItem(
-                  svg: AppIcons.subscription,
-                  text: "Subscription",
-                  onTap: () {
-                    // Get.toNamed(AppRoute.subscriptionScreen);
-                  }),
+              // profileItem(
+              //     svg: AppIcons.subscription,
+              //     text: "Subscription",
+              //     onTap: () {
+              //       // Get.toNamed(AppRoute.subscriptionScreen);
+              //     }),
               profileItem(
                   svg: AppIcons.payHistory,
                   text: "Wallet",
