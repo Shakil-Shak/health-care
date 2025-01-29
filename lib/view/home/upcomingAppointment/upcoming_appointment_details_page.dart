@@ -45,7 +45,7 @@ class UpcomingAppointmentDetailsPage extends StatelessWidget {
                   crossAxisCount: 3,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
-                  childAspectRatio: 1,
+                  childAspectRatio: 0.8,
                 ),
                 itemCount: 6,
                 itemBuilder: (context, index) {

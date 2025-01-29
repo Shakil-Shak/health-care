@@ -14,7 +14,6 @@ class AppointmentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 380,
-      height: 165,
       padding: const EdgeInsets.all(19.12),
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
@@ -55,7 +54,7 @@ class AppointmentCard extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     color: AppColor.black,
                   ),
-                  Row(
+                  Column(
                     children: [
                       Row(
                         children: [
@@ -72,7 +71,7 @@ class AppointmentCard extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        width: 5,
+                        height: 5,
                       ),
                       Row(
                         children: [

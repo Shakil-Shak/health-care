@@ -22,7 +22,7 @@ class MedicalRecordsPage extends StatelessWidget {
             crossAxisCount: 3,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            childAspectRatio: 1,
+            childAspectRatio: 0.8,
           ),
           itemCount: 50,
           itemBuilder: (context, index) {

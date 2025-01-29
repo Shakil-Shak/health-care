@@ -141,7 +141,8 @@ class AppointmentPage extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AppointmentDetailsPage()),
+              MaterialPageRoute(
+                  builder: (context) => const AppointmentDetailsPage()),
             );
           },
         );
@@ -154,17 +155,15 @@ class AppointmentPage extends StatelessWidget {
       key: key,
       itemCount: 5,
       itemBuilder: (context, index) {
-        return InkWell(
+        return AppointmentCard(
+          title: "Dr. Tanu",
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AppointmentDetailsPage()),
+              MaterialPageRoute(
+                  builder: (context) => const AppointmentDetailsPage()),
             );
           },
-          child: AppointmentCard(
-            title: "Dr. Tanu",
-            onTap: () {},
-          ),
         );
       },
     );
@@ -175,17 +174,15 @@ class AppointmentPage extends StatelessWidget {
       key: key,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return InkWell(
+        return AppointmentCard(
+          title: "Dr. Ananna",
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AppointmentDetailsPage()),
+              MaterialPageRoute(
+                  builder: (context) => const AppointmentDetailsPage()),
             );
           },
-          child: AppointmentCard(
-            title: "Dr. Ananna",
-            onTap: () {},
-          ),
         );
       },
     );

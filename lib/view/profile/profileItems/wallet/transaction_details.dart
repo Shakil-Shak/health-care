@@ -40,8 +40,7 @@ class TransactionDetails extends StatelessWidget {
                     children: [
                       buildTransactionDetailRow('Full name :', 'Jane Cooper',
                           isbold: true),
-                      buildTransactionDetailRow(
-                          'Phone number :', '(319) 555-0115',
+                      buildTransactionDetailRow('Phone number :', '555-0115',
                           isbold: true),
                       buildTransactionDetailRow('Email :', 'abc@example.com',
                           isbold: true),
@@ -72,8 +71,8 @@ class TransactionDetails extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          commonText(label, size: 16),
-          commonText(value, size: 16, isBold: isbold),
+          commonText(label, size: 14),
+          commonText(value, size: 14, isBold: isbold),
         ],
       ),
     );
